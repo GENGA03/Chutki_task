@@ -103,13 +103,16 @@ Please be thorough and extract all food-related items. If information is not ava
       `
 
       for (const item of menuItems) {
+        const ingredients = Array.isArray(item.ingredients) ? item.ingredients : []
+        const dietaryInfo = Array.isArray(item.dietaryInfo) ? item.dietaryInfo : []
+        
         await sql`
           INSERT INTO menu_items (
             id, name, description, price, category, 
             ingredients, dietary_info, availability, created_at
           ) VALUES (
             ${item.id}, ${item.name}, ${item.description}, ${item.price}, 
-            ${item.category}, ${item.ingredients || []}, ${item.dietaryInfo || []}, 
+            ${item.category}, ${ingredients}, ${dietaryInfo}, 
             ${item.availability}, ${item.createdAt}
           )
         `
