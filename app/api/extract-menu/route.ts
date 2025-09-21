@@ -103,26 +103,16 @@ Please be thorough and extract all food-related items. If information is not ava
       `
 
       for (const item of menuItems) {
-        const ingredients = item.ingredients || []
-        const dietaryInfo = item.dietaryInfo || []
-        
-        await sql.query(
-          `INSERT INTO menu_items (
+        await sql`
+          INSERT INTO menu_items (
             id, name, description, price, category, 
             ingredients, dietary_info, availability, created_at
-          ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)`,
-          [
-            item.id,
-            item.name,
-            item.description,
-            item.price,
-            item.category,
-            ingredients,
-            dietaryInfo,
-            item.availability,
-            item.createdAt
-          ]
-        )
+          ) VALUES (
+            ${item.id}, ${item.name}, ${item.description}, ${item.price}, 
+            ${item.category}, ${JSON.stringify(item.ingredients || [])}, ${JSON.stringify(item.dietaryInfo || [])}, 
+            ${item.availability}, ${item.createdAt}
+          )
+        `
       }
     } catch (dbError) {
       console.error('Database error:', dbError)
