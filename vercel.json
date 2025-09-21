@@ -6,16 +6,5 @@
     "app/api/menu-items/route.ts": {
       "maxDuration": 10
     }
-  },
-  "env": {
-    "GEMINI_API_KEY": "@GEMINI_API_KEY",
-    "POSTGRES_URL": "@POSTGRES_URL",
-    "POSTGRES_PRISMA_URL": "@POSTGRES_PRISMA_URL",
-    "POSTGRES_URL_NO_SSL": "@postgres_url_no_ssl",
-    "POSTGRES_URL_NON_POOLING": "@POSTGRES_URL_NON_POOLING",
-    "POSTGRES_USER": "@POSTGRES_USER",
-    "POSTGRES_HOST": "@POSTGRES_HOST",
-    "POSTGRES_PASSWORD": "@POSTGRES_PASSWORD",
-    "POSTGRES_DATABASE": "@POSTGRES_DATABASE"
   }
 }
