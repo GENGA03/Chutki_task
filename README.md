@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🍽️ Food Menu Extractor
 
 A full-stack web application that extracts structured food menu data from text files using AI. Perfect for processing WhatsApp chat exports or any text file containing menu information.
@@ -234,3 +235,6 @@ If you encounter any issues or have questions:
 ---
 
 **Happy Menu Extracting! 🍽️✨**
+=======
+# Chutki_task
+>>>>>>> 796abbbc202c3df234163e71301ffe9ca30d4d4d
