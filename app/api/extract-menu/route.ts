@@ -109,7 +109,7 @@ Please be thorough and extract all food-related items. If information is not ava
             ingredients, dietary_info, availability, created_at
           ) VALUES (
             ${item.id}, ${item.name}, ${item.description}, ${item.price}, 
-            ${item.category}, ${item.ingredients}, ${item.dietaryInfo}, 
+            ${item.category}, ${item.ingredients || []}, ${item.dietaryInfo || []}, 
             ${item.availability}, ${item.createdAt}
           )
         `
