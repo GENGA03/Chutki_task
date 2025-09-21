@@ -1,0 +1,21 @@
+{
+  "functions": {
+    "app/api/extract-menu/route.ts": {
+      "maxDuration": 30
+    },
+    "app/api/menu-items/route.ts": {
+      "maxDuration": 10
+    }
+  },
+  "env": {
+    "GEMINI_API_KEY": "@gemini_api_key",
+    "POSTGRES_URL": "@postgres_url",
+    "POSTGRES_PRISMA_URL": "@postgres_prisma_url",
+    "POSTGRES_URL_NO_SSL": "@postgres_url_no_ssl",
+    "POSTGRES_URL_NON_POOLING": "@postgres_url_non_pooling",
+    "POSTGRES_USER": "@postgres_user",
+    "POSTGRES_HOST": "@postgres_host",
+    "POSTGRES_PASSWORD": "@postgres_password",
+    "POSTGRES_DATABASE": "@postgres_database"
+  }
+}
